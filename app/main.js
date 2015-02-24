@@ -5,7 +5,7 @@ var app = angular.module('flamencoApp', [
 /**
  * Configure the Routes
  */
-app.config(['$routeProvider', function ($routeProvider) {
+app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
   $routeProvider
     // Home
     .when("/", {templateUrl: "app/components/pages/home.html", controller: "PageCtrl"})
@@ -19,6 +19,8 @@ app.config(['$routeProvider', function ($routeProvider) {
     // .when("/blog/post", {templateUrl: "app/components/pages/blog_item.html", controller: "BlogCtrl"})
     // else 404
     .otherwise("/404", {templateUrl: "app/components/pages/404.html", controller: "PageCtrl"});
+
+    $locationProvider.html5Mode(true);
 }]);
 
 /**
