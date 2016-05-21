@@ -1,0 +1,35 @@
+title: Roadmap update - May 2016
+---
+author: Francesco Siddi
+---
+body:
+
+#### text-block ####
+text:
+
+It’s been almost 6 months since we did not provide an update on the status of the project. Flamenco has been used in a few more productions in the meantime, so all is well!
+Usually production rendering happens on a very thight timeline, without chances to do radical changes to the software, but still giving an opportunity to learn valuable lessons. It is now time to take a step back and plan something for the upcoming months.
+
+##What works
+The current architecture (Server-Manager-Worker-Dashboard) works quite well and offers great possibilities of cusomization, so we are definitely going to keep it.
+
+##Rethinking the server
+We clearly need some a couple improvements on the server side, such as:
+well defined and secure authentication system
+improved RESTful API
+
+This issues have been recently tackled by the team at Blender Institute while working on the Blender Cloud. The solution is the Pillar framework (based on the EVE Python package), a MongoDB-backed server with fine-grained authentication and authorization.
+
+Our plan is to use most of that work to rebuild the Flamenco server so that it can offer:
+a predictable interface for 3rd-party render managers
+easy interaction in Blender and the dashboard via the pillar-python-sdk package
+
+The first step for this is to develop a Pillar-based prototype, and the explore how Flamenco and Pillar overlap.
+----
+class: default
+---
+pub_date: 2016-06-22
+---
+summary: It’s been almost 6 months since we did not provide an update on the status of the project. Time for an update!
+---
+twitter_handle: fsiddi
