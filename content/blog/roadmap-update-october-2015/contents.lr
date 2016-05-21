@@ -1,0 +1,51 @@
+title: Roadmap update - October 2015
+---
+summary: In the last few months there as not been much Flamenco development going on at the Blender Institute, mostly because other projects had higher priority.
+---
+pub_date: 2015-10-21
+---
+author: Francesco Siddi
+---
+twitter_handle: fsiddi
+---
+body:
+
+#### banner ####
+image: banner.jpg
+----
+height: 500
+----
+contents: 
+#### text-block ####
+text:
+
+In the last few months there as not been much Flamenco development going on 
+at the Blender Institute, mostly because other projects had higher priority.
+
+After the release of Cosmos Laundromat, and after the publication of a couple 
+of rendering related articles on the Cosmos Laundromat blog, there has been 
+growing interested in Flamenco from several parties (individuals, schools 
+and companies). This is great, and we need to start having a more open 
+communication about what the next steps for the project are.
+
+Here is a list of features that have been partially designed and implemented 
+and that need to be wrapped up before a final 2.0 release.
+
+| Feature                                   | Status      | Description                                                                                                                      |
+|-------------------------------------------|-------------|----------------------------------------------------------------------------------------------------------------------------------|
+| User management                           | In progress |                                                                                                                                  |
+| Complete user and developer documentation | In progress |                                                                                                                                  |
+| Improve server dispatch functions         | Todo        | This is one of the most important parts of the entire project and it definitely needs to be fixed and improved before a release. |
+| Clean up dashboard functionality          | Todo        | Unused and legacy functionality should be removed and/or replaced.                                                               |
+
+
+More items might get added to this table. If you have specific user questions, 
+please get in touch via 
+[our support site :ext](https://flamenco.readme.io/discuss-new). For development 
+related discussions we can use https://github.com/armadillica/flamenco/issues, at least for the moment.
+
+
+Looking forward for the next steps!
+
+----
+class: default

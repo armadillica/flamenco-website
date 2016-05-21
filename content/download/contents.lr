@@ -1,0 +1,13 @@
+_model: page
+---
+title: Download
+---
+body:
+
+You can download flamenco here, or checkout the github repo and stay up to date! To check out the repo simply:
+```
+git clone http://github.com/armadillica/flamenco
+```
+
+[View Github repo](http://github.com/fsiddi/flamenco)
+[Download 2.0](https://github.com/fsiddi/flamenco/releases/tag/v2.0.0-beta.1)
