@@ -1,0 +1,60 @@
+| {% extends "layout.html" %}
+| {% block title %}{{ this.title }}{% endblock %}
+| {% block body %}
+section#header1-73.mbr-box.mbr-section.mbr-section--relative.mbr-section--fixed-size.mbr-section--full-height.mbr-section--bg-adapted.mbr-parallax-background.mbr-after-navbar(style="background-image: url({{ '/images/bg_flamenco_02.jpg' | url }});")
+	.mbr-box__magnet.mbr-box__magnet--sm-padding.mbr-box__magnet--center-left
+		.mbr-overlay(style='opacity: 0.6; background-color: rgb(76, 105, 114);')
+		.mbr-box__container.mbr-section__container.container
+			.mbr-box.mbr-box--stretched
+				.mbr-box__magnet.mbr-box__magnet--center-left
+					.row
+						.col-sm-6
+							.mbr-hero.animated.fadeInUp
+								h1.mbr-hero__text Flamenco beta1
+								p.mbr-hero__subtext
+									| Flamenco is the free and open source render manager.
+									br
+							.mbr-buttons.btn-inverse.mbr-buttons--left
+								a.mbr-buttons__btn.btn.btn-lg.animated.fadeInUp.delay.btn-warning(href="{{ '/download' | url }}") BETA DOWNLOAD
+								a.mbr-buttons__btn.btn.btn-lg.btn-default.animated.fadeInUp.delay(href="{{ '/documentation' | url }}") LEARN MORE
+		.mbr-arrow.mbr-arrow--floating.text-center
+			.mbr-section__container.container
+				a.mbr-arrow__link(href='#features1-75')
+					i.glyphicon.glyphicon-menu-down
+section#features1-75.content-2.col-3(style='background-color: rgb(255, 255, 255);')
+	.container
+		.row
+			div
+				.thumbnail
+					//- .image
+					//- 	img.undefined(src='assets/images/google-slides-350x350-16.png')
+					.caption
+						div
+							h3 Web-based, cross platform
+							p
+								| Flamenco consists in a Python web application, therefore it can run on many platforms and it is accessible to the user via web browser.
+						//- p.group
+						//- 	a.btn.btn-default(href='https://mobirise.com/bootstrap-template/') LEARN MORE
+			div
+				.thumbnail
+					//- .image
+					//- 	img.undefined(src='assets/images/reminders-350x350-18.png')
+					.caption
+						div
+							h3 Extensible architecture
+							p
+								| Based on a direct server-client interaction, flamenco is very easy to setup, start, stop and monitor. Technical details about the design are available in the docs.
+						//- p.group
+						//- 	a.btn.btn-default(href='https://mobirise.com/bootstrap-template/') LEARN MORE
+			div
+				.thumbnail
+					//- .image
+					//- 	img.undefined(src='assets/images/photos-350x350-95.png')
+					.caption
+						div
+							h3 Free Software
+							p
+								| flamenco is free software, released under GPL 2.0. This means you are free to use it for your projects, modify it, and eventually contribute to its development.
+						//- p.group
+						//- 	a.btn.btn-default(href='https://mobirise.com/bootstrap-template/') LEARN MORE
+| {% endblock %}

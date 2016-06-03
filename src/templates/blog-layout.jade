@@ -1,0 +1,45 @@
+| {% extends "layout.html" %}
+| {% block title %}Divide and conquer{% endblock %}
+| {% block outerbody %}
+| {% set image = site.get('/blog').attachments.images.first() %}
+section#content5-77.content-2.simple.col-1.col-undefined.mbr-parallax-background.mbr-after-navbar(style="{% if image %} background-image: url({{ image|url }});{% endif %}")
+	.mbr-overlay(style='opacity: 0.6; background-color: rgb(0, 0, 0);')
+	.container
+		.row
+			div
+				.thumbnail
+					.caption
+						h3 Divide and conquer
+						div
+							p
+								| Development blog of the Flamenco project
+								br
+|   {{ super() }}
+| {% endblock %}
+| {% block body %}
+
+| {% block blog_body %}{% endblock %}
+
+//- .row
+//-   .col-sm-8
+//-     | {% block blog_body %}{% endblock %}
+//-   .col-sm-4
+//-     h3 About This Blog
+//-     p
+//-       | “The Transcript” is the blog about
+//-       a(href="{{ '/'|url\
+//-       }}") Lektor
+//-       | , a new solution in static content management.
+//-     p
+//-       | Subscribe for the latest news about Lektor as well as content
+//-       | management and web development.
+//-       ul
+//-         li
+//-           a(href="{{ '@atom/transcript'|url }}") RSS Feed
+//-         li
+//-           a(href='https://twitter.com/getlektor') Follow us on Twitter
+//-     h3 Missed a Post?
+//-     ul
+//-       li
+//-         a(href="{{ '@blog-archive'|url }}") Blog Archives
+| {% endblock %}

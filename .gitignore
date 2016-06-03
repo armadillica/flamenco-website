@@ -1,5 +1,5 @@
 docs/
 node_modules/
-templates/
+/templates/
 *.sublime-project
 *.sublime-workspace
