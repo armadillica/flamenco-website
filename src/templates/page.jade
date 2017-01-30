@@ -2,28 +2,25 @@
 | {% block title %}{{ this.title }}{% endblock %}
 | {% block outerbody %}
 | {% set image = site.get('/blog').attachments.images.first() %}
-section#content5-77.content-2.simple.col-1.col-undefined.mbr-parallax-background.mbr-after-navbar(style="{% if image %} background-image: url({{ image|url }});{% endif %}")
-	.mbr-overlay(style='opacity: 0.6; background-color: rgb(0, 0, 0);')
-	.container
-		.row
-			div
-				.thumbnail
-					.caption
-						h3 {{ this.title }}
-						| {% if this.subtitle %}
-						div
-							p
-								| Development blog of the Flamenco project
-								br
-						| {% endif %}
-|   {{ super() }}
-| {% endblock %}
-
-| {% block body %}
-section.content-2.col-2
+section(class="jumbo", style="{% if image %} background-image: url({{ image|url }});{% endif %}")
 	.container
 		.row
 			.col-md-8.col-md-offset-2
-				p
-					| {{ this.body }}
+				h1 {{ this.title }}
+				| {% if this.subtitle %}
+				div
+					p
+						| Development blog of the Flamenco project
+						br
+				| {% endif %}
+| {{ super() }}
+| {% endblock %}
+
+| {% block body %}
+section(class="page-section")
+	.container
+		.row
+			.col-md-8.col-md-offset-2
+				| {{ this.body }}
+		
 | {% endblock %}

@@ -1,60 +1,35 @@
-| {% extends "layout.html" %}
+| {% extends "blog-layout.html" %}
 | {% from 'macros/blocksupport.html' import render_full_width_blocks %}
 | {% block title %}{{ this.title }} | Divide and conquer{% endblock %}
-| {% set image = site.get('/blog').attachments.images.first() %}
-| {% block outerbody %}
-section#content5-77.content-2.simple.col-1.col-undefined.mbr-parallax-background.mbr-after-navbar(style="{% if image %} background-image: url({{ image|url }});{% endif %}")
-  .mbr-overlay(style='opacity: 0.6; background-color: rgb(0, 0, 0);')
-  .container
-    .row
-      div
-        //- .thumbnail
-        //-   .caption
-        //-     h3 {{ this.title }}
-        //-     div
-        //-       p
-        //-         | by
-        //-         | {% if this.twitter_handle %}
-        //-         a(href='https://twitter.com/{{ this.twitter_handle }}')
-        //-           | {{ this.author or this.twitter_handle }}
-        //-         | {% else %}
-        //-         | {{ this.author }}
-        //-         | {% endif %}
-        //-         | on {{ this.pub_date|dateformat('full') }}
-|   {{ super() }}
-| {% endblock %}
 
 | {% block body %}
 .blog-post
-  | {% call render_full_width_blocks(this.body.blocks) %}
-  section.mbr-section
-    .mbr-section__container.container.mbr-section__container--first
-      .mbr-header.mbr-header--wysiwyg.row
-        .col-sm-8.col-sm-offset-2
-          .meta-bar
-            h1 {{ this.title }}
-            p.meta
-              | by
-              | {% if this.twitter_handle %}
-              a(href='https://twitter.com/{{ this.twitter_handle }}')
-                | {{ this.author or this.twitter_handle }}
-              | {% else %}
-              | {{ this.author }}
-              | {% endif %}
-              | on {{ this.pub_date|dateformat('full') }}
-  | {% endcall %}
-  | {% set siblings = this.get_siblings() %}
-  | {% set older = siblings.next_page %}
-  | {% set newer = siblings.prev_page %}
-  .container
-    .row
-      .col-md-8.col-md-offset-2
-        | {% if older %}
-        .nav-prev
-          a(href='{{ older|url }}') Previous: {{ older.title }}
-        | {% endif %}
-        | {% if newer %}
-        .nav-next
-          a(href='{{ newer|url }}') Next: {{ newer.title }}
-        | {% endif %}
+	| {% call render_full_width_blocks(this.body.blocks) %}
+	section
+		.col-sm-8.col-sm-offset-2
+			h1 {{ this.title }}
+			p.meta
+				| by
+				| {% if this.twitter_handle %}
+				a(href='https://twitter.com/{{ this.twitter_handle }}')
+					| {{ this.author or this.twitter_handle }}
+				| {% else %}
+				| {{ this.author }}
+				| {% endif %}
+				| on {{ this.pub_date|dateformat('full') }}
+	| {% endcall %}
+	| {% set siblings = this.get_siblings() %}
+	| {% set older = siblings.next_page %}
+	| {% set newer = siblings.prev_page %}
+	.container
+		.row
+			.col-md-8.col-md-offset-2
+				| {% if older %}
+				.nav-prev
+					a(href='{{ older|url }}') Previous: {{ older.title }}
+				| {% endif %}
+				| {% if newer %}
+				.nav-next
+					a(href='{{ newer|url }}') Next: {{ newer.title }}
+				| {% endif %}
 | {% endblock %}

@@ -3,30 +3,30 @@
 | {% block title %}Divide and conquer{% endblock %}
 | {% block blog_body %}
 
-
 | {% for post in this.pagination.items %}
-section.mbr-section
-  .mbr-section__container.container.mbr-section__container--first
-    .mbr-header.mbr-header--wysiwyg.row
-      .col-sm-8.col-sm-offset-2
-        h3.mbr-header__text
-          a(href='{{ post|url }}') {{ post.title }} 
-        p.mbr-header__subtext
-          | by
-          | {% if post.twitter_handle %}
-          a(href='https://twitter.com/{{ post.twitter_handle }}')
-            | {{ post.author or post.twitter_handle }}
-          | {% else %}
-          | {{ post.author }}
-          | {% endif %}
-          | on {{ post.pub_date|dateformat }}
-        p.summary
-          | {{ post.summary }}
-          a.more(href='{{ post|url }}') Read more …
-|   {% endfor %}
+section
+	.container
+		.row
+			.col-sm-8.col-sm-offset-2
+				h3.mbr-header__text
+					a(href='{{ post|url }}') {{ post.title }} 
+				p.mbr-header__subtext
+					| by
+					| {% if post.twitter_handle %}
+					a(href='https://twitter.com/{{ post.twitter_handle }}')
+						| {{ post.author or post.twitter_handle }}
+					| {% else %}
+					| {{ post.author }}
+					| {% endif %}
+					| on {{ post.pub_date|dateformat }}
+				p.summary
+					| {{ post.summary }}
+					br
+					a(href='{{ post|url }}') Read more
+| {% endfor %}
 
-|   {% if this.pagination.pages > 1 %}
-|     {{ render_pagination(this.pagination) }}
-|   {% endif %}
+| {% if this.pagination.pages > 1 %}
+| {{ render_pagination(this.pagination) }}
+| {% endif %}
 
 | {% endblock %}
