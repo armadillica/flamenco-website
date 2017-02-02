@@ -41,8 +41,10 @@ body {
 }
 
 .start-jumbo {
+  color: #EEE;
   padding: 60px 15px;
   text-align: center;
+  background-image: url('../images/header.jpg');
 }
 
 section.jumbo {

@@ -1,19 +1,26 @@
 | {% extends "layout.html" %}
 | {% block title %}{{ this.title }}{% endblock %}
 | {% block body %}
-.container
-	.start-jumbo
-		h1 Free and Open Source Render Manager
-		p.lead
-			| Take control of your computing infrastructure and get things done.
-			br
-			| Flamenco is used in production at Blender Institute.
-
-	.row
-		.col-md-6
-			h3 Web-based, cross platform
-			| Flamenco consists in a Python web application, therefore it can run on many platforms and it is accessible to the user via web browser.
-		.col-md-6
-			h3 Extensible architecture
-			| Based on a direct server-client interaction, flamenco is very easy to setup, start, stop and monitor. Technical details about the design are available in the docs.
+.start-jumbo
+	h1 Free and Open Source Render Manager
+	p.lead
+		| Take control of your computing infrastructure and get things done.
+		br
+		| Flamenco is used in production at Blender Institute.
+section.page-section
+	.container
+		.row
+			.col-md-6
+				h3 Web-based, cross platform
+				| Flamenco consists in a stack of Python and Go web application, therefore it can run on many platforms and it is accessible to the user via web browser.
+			.col-md-6
+				h3 Extensible architecture
+				| Based on a direct server-client interaction, flamenco is very easy to setup, start, stop and monitor. Technical details about the design are available in the docs.
+		.row
+			.col-md-6
+				h3 Free software
+				| Flamenco consists in a stack of Python and Go web application, therefore it can run on many platforms and it is accessible to the user via web browser.
+			.col-md-6
+				h3 Community
+				| Based on a direct server-client interaction, flamenco is very easy to setup, start, stop and monitor. Technical details about the design are available in the docs.
 | {% endblock %}

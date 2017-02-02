@@ -2,9 +2,8 @@
 | {% from "macros/pagination.html" import render_pagination %}
 | {% block title %}Divide and conquer{% endblock %}
 | {% block blog_body %}
-
-| {% for post in this.pagination.items %}
-section
+section.page-section
+	| {% for post in this.pagination.items %}
 	.container
 		.row
 			.col-sm-8.col-sm-offset-2
@@ -23,7 +22,7 @@ section
 					| {{ post.summary }}
 					br
 					a(href='{{ post|url }}') Read more
-| {% endfor %}
+	| {% endfor %}
 
 | {% if this.pagination.pages > 1 %}
 | {{ render_pagination(this.pagination) }}
