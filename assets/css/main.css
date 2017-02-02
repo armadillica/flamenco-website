@@ -7,6 +7,18 @@ body {
   padding-top: 50px;
 }
 
+a {
+  color: #ef5350;
+}
+
+a:hover {
+  color: #ef5350;
+}
+
+h2 {
+  font-weight: 300;
+}
+
 .navbar {
   background-color: #ef5350;
   min-height: 56px;
@@ -60,12 +72,15 @@ section.page-section {
   margin-top: 50px;
 }
 
-.blog-post {
-  margin-bottom: 50px;
+section {
+  color: #333;
   font-size: 16px;
-  line-height: 21px;
+  line-height: 25.6px;
 }
 
+.blog-post {
+  margin-bottom: 50px;
+}
 
 .blog-post-nav {
   margin-top: 20px;
