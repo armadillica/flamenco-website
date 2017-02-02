@@ -4,12 +4,17 @@ title: Download
 ---
 body:
 
-Currently Flamenco supports Blender rendering jobs (using the Cycles render engine), but it is designed to support a variety of software and tasks, such as compositing, simulation or encoding. Thanks to its modular structure and simple RESTful API, it can be easily integrated in your pipeline.
+Currently Flamenco supports Blender rendering jobs (using the Cycles render engine), but it is designed to support a variety of software and tasks, such as compositing, simulation or encoding. Thanks to its modular structure and simple RESTful API, it can be easily integrated in your pipeline. 
 
-You can download Flamenco here, or checkout the GitHub repo and stay up to date! To check out the repo simply:
-```
-git clone http://github.com/armadillica/flamenco
-```
+Check out the latest release on [GitHub](https://github.com/armadillica/flamenco/releases) or download the sources from the official [developers.blender.org](https://developer.blender.org/project/view/58/) project.
+<br>
+<br>
+<div class="row">
+<div class="col-md-4 col-md-offset-2">
+<a href="https://github.com/armadillica/flamenco/releases" class="btn btn-default btn-block">Latest Release</a>
+</div>
+<div class="col-md-4">
+<a href="https://developer.blender.org/project/view/58/" class="btn btn-default btn-block">Get the sources</a>
+</div>
+</div>
 
-[View Github repo](http://github.com/armadillica/flamenco)
-[Download 2.0](https://github.com/armadillica/flamenco/releases/tag/v2.0.0-beta.1)
