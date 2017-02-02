@@ -25,8 +25,9 @@ went through large revisions. Flamenco is currently used for the render manageme
 
 ## Server, Manager and Worker
 
-As originally planned, the Server has been rewritten as a Pillar extension, taking advantage of all its features 
-(especially on the user and project manageent side), and allowing to integrate Flamenco into the Blender Cloud. 
+As originally planned, the Server has been rewritten as a [Pillar](https://developer.blender.org/project/view/63/) 
+extension, taking advantage of all its features (especially on the user and project management side), and allowing to 
+integrate Flamenco into the Blender Cloud. 
 It is of course possible to run Flamenco Server as a standalone application, but it was a priority for us to get it to 
 deployt it into our existing online production platform.
 
@@ -40,7 +41,9 @@ At the moment we support a limited set of Job types:
 
 - sleep: used for tests (run a sleep command and print some messages)
 - blender-render: the default Blender render command (a good base for other rendering commands, also with other software)
-- blender-render-progressive: like blender-render, but taking advantage of the Cycles chunk render functionality
+- blender-render-progressive: like blender-render, but taking advantage of the 
+[Cycles chunk render](https://developer.blender.org/rC2decf06863dcdc1c93746d918ed4ff0059d57441) functionality, which
+allows to partially render the samples of an image and increment them in successive iterations
 
 ## What's next
 
