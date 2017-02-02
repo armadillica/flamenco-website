@@ -1,70 +1,83 @@
+html, body {
+  height: 100%;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 body {
-    width: 100%;
-    height: 100%;
-    padding-top: 80px
+  padding-top: 50px;
 }
 
-html {
-    width: 100%;
-    height: 100%;
+.start-jumbo {
+  padding: 60px 15px;
+  text-align: center;
 }
 
-@media(min-width:767px) {
-    .navbar {
-        padding: 20px 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
-    }
-
-    .top-nav-collapse {
-        padding: 0;
-    }
+.navbar {
+  background-color: #ef5350;
+  min-height: 56px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2);
 }
 
-.intro-section {
-    height: 100%;
-    padding: 20px 0;
-    text-align: center;
-    background: #fff;
+.navbar a {
+    color: #FFF;
 }
 
-.about-section {
-    height: 100%;
-    padding: 150px 0;
-    text-align: center;
-    background: #eee;
+.navbar-nav li a {
+  padding-top: 18px;
 }
 
-.download-section {
-    height: 100%;
-    padding: 150px 0;
-    text-align: center;
-    background: #fff;
+.navbar-brand {
+  padding-top: 18px;
 }
 
-.get-involved-section {
-    height: 100%;
-    padding: 150px 0;
-    text-align: center;
-    background: #eee;
+.nav li a:hover {
+  background-color: transparent;
+  color: rgba(255,255,255,.8);
 }
 
-.intro-section {
-    margin-top: 50px;
+#wrap {
+  min-height: 100%;
 }
 
-.intro-section h1{
-    font-size: 65px;
+#main {
+  overflow:auto;
+  padding-bottom:60px; /* this needs to be bigger than footer height*/
 }
 
-.intro-section p{
-    font-size: 25px;
+section.jumbo {
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #FFF;
 }
 
-.about-section p,
-.download-section p,
-.get-involved-section p{
-    font-size: 18px;
+section.page-section {
+  margin-top: 50px;
 }
 
+.footer {
+  position: relative;
+  margin-top: -60px; /* negative value of footer height */
+  height: 60px;
+  clear:both;
+  padding-top:20px;
+} 
+
+footer {
+  background-color: #333;
+  color: #EEE;
+}
+
+footer a {
+  color: #AAA;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: #CCC;
+}
+
+footer span {
+  padding-right: 20px;
+}

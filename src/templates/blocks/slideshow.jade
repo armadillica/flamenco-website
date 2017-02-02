@@ -1,0 +1,25 @@
+| {% set carousel_id = 'carousel-' ~ get_random_id() %}
+.slideshow-wrapper
+  .slideshow
+    .slideshow-inner
+      .carousel.slide(data-ride='carousel', data-interval='8500', id='{{ carousel_id }}')
+        | {#
+        ol.carousel-indicators
+          | {% for slide in this.slides.blocks %}
+          li.active(data-target='#{{ carousel_id }}', data-slide-to='{{ loop.index0 }}', {%='', if='', loop.first='', %}='', endif='')
+          |         {% endfor %}
+        |         #}
+        .carousel-inner(role='listbox')
+          | {% for slide in this.slides.blocks %}
+          .item.if.endif(class='slide{% loop.first %} active{% %}')
+            .container
+              img(src='{{ slide.image }}')
+              .description
+                | {{ slide.description }}
+          |           {% endfor %}
+        a.left.carousel-control(href='#{{ carousel_id }}', role='button', data-slide='prev')
+          span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+          span.sr-only Previous
+        a.right.carousel-control(href='#{{ carousel_id }}', role='button', data-slide='next')
+          span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+          span.sr-only Next

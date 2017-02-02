@@ -1,0 +1,8 @@
+[project]
+name = flamenco
+
+[servers.production]
+name = Production
+enabled = yes
+default = yes
+target = rsync://fsiddi@flamenco.io/home/fsiddi/flamenco.io

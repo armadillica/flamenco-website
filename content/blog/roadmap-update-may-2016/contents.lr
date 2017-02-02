@@ -1,0 +1,50 @@
+title: Roadmap update - May 2016
+---
+author: Francesco Siddi
+---
+body:
+
+#### text-block ####
+text:
+
+Flamenco has been used in a few more productions during the past 6 months: we have been quiet but busy!
+
+Usually production rendering happens on a very thight timeline, without the chance to do radical changes to the software, but still giving an opportunity to learn valuable lessons. It is now time to take a step back and plan something for the upcoming months.
+
+## What works
+The current architecture (Server-Manager-Worker-Dashboard) works quite well and offers a great degree of flexibility and customization, so we are definitely going to keep it.
+
+Recently we have tested the manager component with over 300 clients connected to it, running on a dual core machine with 4 GB of RAM, and it handled the load with no problem.
+
+
+## Rethinking the server
+There are still several aspects of the architecture that need improvements, mostly related to the server component. On that side we need to provide:
+
+* a well defined and secure authentication system
+* an improved RESTful API
+
+This issues have been recently tackled by the team at Blender Institute while working on the Blender Cloud. The solution is the [Pillar](https://github.com/armadillica/pillar) framework (based on the EVE Python package), a MongoDB-backed server with fine-grained authentication and authorization.
+
+Our plan is to use Pillar as a foundation to rebuild the Flamenco server so that it can offer:
+
+* a predictable interface for 3rd-party render managers
+* easy interaction in Blender and the dashboard via the pillar-python-sdk package
+
+## Next steps
+The first step for this process is to develop a Pillar-based prototype, and then explore how Flamenco and Pillar overlap. Here is a more detailed breakdown:
+
+* Define a Flamenco *module* that can run on top of any Pillar instance
+* Migrate the existing functionality for job compilation and dispatch to the new architecture
+* Test the new server with the existing manager and workers, expecting no change
+* Take advantage of the existing testing facilities to improve reliability of the current functions
+
+We expect this to happen in the upcoming weeks, so if you are planning any contribution to the codebase, please make sure you get in touch with us to discuss your plan!
+
+----
+class: default
+---
+pub_date: 2016-06-22
+---
+summary: It’s been almost 6 months since we did not provide an update on the status of the project. Time for an update!
+---
+twitter_handle: fsiddi

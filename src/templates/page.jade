@@ -1,0 +1,26 @@
+| {% extends "layout.html" %}
+| {% block title %}{{ this.title }}{% endblock %}
+| {% block outerbody %}
+| {% set image = site.get('/blog').attachments.images.first() %}
+section(class="jumbo", style="{% if image %} background-image: url({{ image|url }});{% endif %}")
+	.container
+		.row
+			.col-md-8.col-md-offset-2
+				h1 {{ this.title }}
+				| {% if this.subtitle %}
+				div
+					p
+						| Development blog of the Flamenco project
+						br
+				| {% endif %}
+| {{ super() }}
+| {% endblock %}
+
+| {% block body %}
+section(class="page-section")
+	.container
+		.row
+			.col-md-8.col-md-offset-2
+				| {{ this.body }}
+		
+| {% endblock %}

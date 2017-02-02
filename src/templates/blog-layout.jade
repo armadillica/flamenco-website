@@ -1,0 +1,19 @@
+| {% extends "layout.html" %}
+| {% block title %}Divide and conquer{% endblock %}
+| {% block outerbody %}
+| {% set image = site.get('/blog').attachments.images.first() %}
+section(class="jumbo", style="{% if image %} background-image: url({{ image|url }});{% endif %}")
+	.container
+		.row
+			.col-md-8.col-md-offset-2
+				h2 Divide and conquer
+				div
+					p
+						| Development blog of the Flamenco project
+| {{ super() }}
+| {% endblock %}
+| {% block body %}
+
+| {% block blog_body %}{% endblock %}
+
+| {% endblock %}

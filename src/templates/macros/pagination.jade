@@ -1,0 +1,14 @@
+| {% macro render_pagination(pagination) %}
+.pagination
+  | {% if pagination.has_prev %}
+  a(href='{{ pagination.prev|url }}') « Previous
+  |     {% else %}
+  span.disabled « Previous
+  |     {% endif %}
+  strong {{ pagination.page }}
+  |     {% if pagination.has_next %}
+  a(href='{{ pagination.next|url }}') Next »
+  |     {% else %}
+  span.disabled Next »
+  |     {% endif %}
+| {% endmacro %}

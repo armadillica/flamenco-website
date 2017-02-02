@@ -1,0 +1,35 @@
+| {% extends "blog-layout.html" %}
+| {% from 'macros/blocksupport.html' import render_full_width_blocks %}
+| {% block title %}{{ this.title }} | Divide and conquer{% endblock %}
+
+| {% block body %}
+.blog-post
+	| {% call render_full_width_blocks(this.body.blocks) %}
+	section
+		.col-sm-8.col-sm-offset-2
+			h1 {{ this.title }}
+			p.meta
+				| by
+				| {% if this.twitter_handle %}
+				a(href='https://twitter.com/{{ this.twitter_handle }}')
+					| {{ this.author or this.twitter_handle }}
+				| {% else %}
+				| {{ this.author }}
+				| {% endif %}
+				| on {{ this.pub_date|dateformat('full') }}
+	| {% endcall %}
+	| {% set siblings = this.get_siblings() %}
+	| {% set older = siblings.next_page %}
+	| {% set newer = siblings.prev_page %}
+	.container
+		.row
+			.col-md-8.col-md-offset-2
+				| {% if older %}
+				.nav-prev
+					a(href='{{ older|url }}') Previous: {{ older.title }}
+				| {% endif %}
+				| {% if newer %}
+				.nav-next
+					a(href='{{ newer|url }}') Next: {{ newer.title }}
+				| {% endif %}
+| {% endblock %}
