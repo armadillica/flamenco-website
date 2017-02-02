@@ -2,7 +2,7 @@
 | {% block title %}{{ this.title }}{% endblock %}
 | {% block outerbody %}
 | {% set image = site.get('/blog').attachments.images.first() %}
-section(class="jumbo", style="{% if image %} background-image: url({{ image|url }});{% endif %}")
+section(class="jumbo")
 	.container
 		.row
 			.col-md-8.col-md-offset-2

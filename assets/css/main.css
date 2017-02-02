@@ -7,11 +7,6 @@ body {
   padding-top: 50px;
 }
 
-.start-jumbo {
-  padding: 60px 15px;
-  text-align: center;
-}
-
 .navbar {
   background-color: #ef5350;
   min-height: 56px;
@@ -35,6 +30,7 @@ body {
   color: rgba(255,255,255,.8);
 }
 
+
 #wrap {
   min-height: 100%;
 }
@@ -44,12 +40,18 @@ body {
   padding-bottom:60px; /* this needs to be bigger than footer height*/
 }
 
+.start-jumbo {
+  padding: 60px 15px;
+  text-align: center;
+}
+
 section.jumbo {
   height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #FFF;
+  background-image: url('../images/header.jpg');
 }
 
 section.page-section {
