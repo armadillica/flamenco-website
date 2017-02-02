@@ -69,7 +69,7 @@ section.jumbo {
 }
 
 section.page-section {
-  margin-top: 50px;
+  margin: 50px 0;
 }
 
 section {
@@ -80,6 +80,13 @@ section {
 
 .blog-post {
   margin-bottom: 50px;
+}
+
+.blog-post img {
+  width: 130%;
+  margin-left: -15%;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .blog-post-nav {

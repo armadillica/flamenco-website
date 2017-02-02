@@ -1,0 +1,60 @@
+title: Roadmap update - February 2017
+---
+author: Francesco Siddi
+---
+pub_date: 2017-02-01
+---
+summary: Since December 2016 the team at Blender Institute has been working to update Flamenco, applying all the 
+lessons learned from past productions. Today we present our updated Roadmap for 2017.
+---
+twitter_handle: fsiddi
+---
+body:
+
+#### text-block ####
+text:
+
+Like we mentioned in our previous blogpost, after using Flamenco in Cosmos Laundromat, Caminandes 3 and the 
+Caminandes VR demo, we took some time to redefine our roadmap for the future. Here is where we are now.
+
+The Flamenco core architecture did not change. We still have 3 components (Server, Manager and Worker), but they all
+went through large revisions. Flamenco is currently used for the render management of the 
+[Agent 327 - Barbershop](https://cloud.blender.org/p/agent-327/) animation.
+
+![Flamenco in production](flamenco_2017_02_01.jpg)
+
+## Server, Manager and Worker
+
+As originally planned, the Server has been rewritten as a Pillar extension, taking advantage of all its features 
+(especially on the user and project manageent side), and allowing to integrate Flamenco into the Blender Cloud. 
+It is of course possible to run Flamenco Server as a standalone application, but it was a priority for us to get it to 
+deployt it into our existing online production platform.
+
+Both Manager and Worker have been rewritten. The first one in Golang and the second in Python 3.6. These components are 
+used in-house, but serve as an example for anyone interested in implementing a custom version for a studio
+infrastructure.
+
+## Currently supported Job types
+
+At the moment we support a limited set of Job types:
+
+- sleep: used for tests (run a sleep command and print some messages)
+- blender-render: the default Blender render command (a good base for other rendering commands, also with other software)
+- blender-render-progressive: like blender-render, but taking advantage of the Cycles chunk render functionality
+
+## What's next
+
+We have a [full list of tasks](https://developer.blender.org/project/board/58/) that need to be done before we can make 
+a Flamenco 2.0 release, but we are getting there. The most important missing features are:
+
+- More complete documentation (both on user and developer side)
+- Job filtering
+- Job regeneration
+
+We are always happy to hear feedback! Feel free to open an issue on 
+[developer.blender.org](https://developer.blender.org/project/view/58/) or on 
+[GitHub](https://github.com/armadillica/flamenco/issues). As soon as we update the docs and add funcionality we will 
+write more blogposts.
+
+----
+class: 
