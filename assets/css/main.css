@@ -60,6 +60,17 @@ section.page-section {
   margin-top: 50px;
 }
 
+.blog-post {
+  margin-bottom: 50px;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+
+.blog-post-nav {
+  margin-top: 20px;
+}
+
 .footer {
   position: relative;
   margin-top: -60px; /* negative value of footer height */

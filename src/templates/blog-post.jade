@@ -5,7 +5,7 @@
 | {% block body %}
 .blog-post
 	| {% call render_full_width_blocks(this.body.blocks) %}
-	section
+	section.page-section
 		.col-sm-8.col-sm-offset-2
 			h1 {{ this.title }}
 			p.meta
@@ -21,13 +21,14 @@
 	| {% set siblings = this.get_siblings() %}
 	| {% set older = siblings.next_page %}
 	| {% set newer = siblings.prev_page %}
-	.container
+	.container.blog-post-nav
 		.row
-			.col-md-8.col-md-offset-2
+			.col-md-4.col-md-offset-2
 				| {% if older %}
 				.nav-prev
 					a(href='{{ older|url }}') Previous: {{ older.title }}
 				| {% endif %}
+			.col-md-4
 				| {% if newer %}
 				.nav-next
 					a(href='{{ newer|url }}') Next: {{ newer.title }}
