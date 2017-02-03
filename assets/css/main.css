@@ -42,6 +42,10 @@ h2 {
   color: rgba(255,255,255,.8);
 }
 
+.nav>li>a:focus {
+  background-color: transparent;
+}
+
 
 #wrap {
   min-height: 100%;
