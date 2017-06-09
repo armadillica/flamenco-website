@@ -5,4 +5,4 @@ name = flamenco
 name = Production
 enabled = yes
 default = yes
-target = rsync://fsiddi@flamenco.io/home/fsiddi/flamenco.io
+target = rsync://armadillica@flamenco.io/home/armadillica/flamenco.io
