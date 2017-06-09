@@ -7,8 +7,8 @@ html(lang='en')
 		// The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
 		meta(name='description', content='')
 		meta(name='author', content='')
-		link(rel='icon', href="{{ '/favicon.ico'|asseturl }}")
-		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono")
+		//- link(rel='icon', href="{{ '/favicon.ico'|asseturl }}")
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono")
 		title.
 			Flamenco - {% block title %}Free and Open Source Render Manager{% endblock %}
 		// Bootstrap core CSS
@@ -54,8 +54,8 @@ html(lang='en')
 						a(href='https://blender.institute') Made at the Blender Institute
 					span
 						a(href='https://github.com/armadillica/flamenco/blob/master/LICENSE.txt') License
-		script(href="{{ '/js/vendor/jquery.min.js'|asseturl }}")
-		script(href="{{ '/js/vendor/bootstrap.min.js'|asseturl }}")
+		script(src="{{ '/js/vendor/jquery.min.js'|asseturl }}")
+		script(src="{{ '/js/vendor/bootstrap.min.js'|asseturl }}")
 		script.
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -63,4 +63,3 @@ html(lang='en')
 			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 			ga('create', 'UA-70822533-1', 'auto');
 			ga('send', 'pageview');
-
