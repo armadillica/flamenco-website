@@ -9,5 +9,9 @@ designed to support a variety of software and tasks, such as compositing, simula
 Thanks to its modular structure and simple RESTful API, it can be easily integrated with your
 pipeline.
 
+**NOTE**: Flamenco services at [Blender Cloud](https://cloud.blender.org/) are currently in closed
+beta testing. You can [send us an email](mailto:cloudsupport@blender.org) if you want to join the
+beta. Of course you can also decide to set up your own Flamenco Server and test with that.
+
 ---
 _template: download.html
