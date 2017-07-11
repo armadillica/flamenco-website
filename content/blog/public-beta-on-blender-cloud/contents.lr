@@ -1,0 +1,32 @@
+title: Public Beta on Blender Cloud
+---
+author: Francesco Siddi
+---
+body:
+
+#### text-block ####
+text:
+
+After several months of work, a couple of alpha releases and a private beta testing phase, the team at Blender Institute is very proud to announce the public beta of Flamenco 2.0 for all [Blender Cloud](https://cloud.blender.org) subscribers.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7cnFKhsM67Q?rel=0" frameborder="0" allowfullscreen></iframe>
+
+For this release we have been focusing on providing the server functionality via Blender Cloud and offer a polished workflow that allows users to easily set up their own Manager and Workers. Some of the new features are:
+
+* Job archival
+* Manager-Worker automatic detection
+* Manager standalone web interface
+* Manager configuration via Blender Cloud
+* Complete [setup guide](/docs/user_manual/installation/) in the docs
+
+Flamenco is Free software and can be entirely configured and run on-premise. If you are interested to set-up your personal server, we encourage you to [check out the docs](https://github.com/armadillica/flamenco).
+
+We look forward to hearing feedback and comments that will come with the current release.
+----
+class: default
+---
+pub_date: 2017-07-11
+---
+summary: Major milestone: Flamenco is available in public beta via the Blender Cloud website!
+---
+twitter_handle: fsiddi
