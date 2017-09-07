@@ -1,0 +1,33 @@
+title: New Release of Flamenco - Easier than Ever
+---
+author: Sybren A. Stüvel
+---
+body:
+
+#### text-block ####
+text:
+
+Today, a new version of Flamenco Server, Manager, and Worker introduces a new way to install & use
+Flamenco. The Manager can now enter "setup mode", in which it's very simple to **link it to Flamenco
+Server with only a few clicks**! This mode is started automatically when you don't have a
+configuration file yet, making it even easier to get started.
+
+![Flamenco Manager's new web-based setup](flamenco-manager-setup.png "Flamenco Manager's new web-based setup")
+
+Furthermore, we've changed the way we package Flamenco Manager and Worker so that it's a matter of
+**extracting a package and running the executable**. No more installation of MongoDB is required (we
+bundle it for you), and you don't even need to install Python any more.
+
+Workers can now also find the Manager running on your network by using UPnP/SSDP autodiscovery. That
+means even less configuration to get things up and running.
+
+Download [Flamenco Manager & Worker](https://flamenco.io/download) and get started today!
+
+----
+class: default narrow-images
+---
+pub_date: 2017-09-07
+---
+summary: A new version of Flamenco makes setting up your own render farm a breeze.
+---
+twitter_handle: sastuvel
