@@ -1,0 +1,36 @@
+title: New Release of Flamenco - More Control
+---
+author: Sybren A. Stüvel
+---
+body:
+
+#### text-block ####
+text:
+
+Today, a new version of Flamenco Manager and Worker (both versions 2.1.0) introduces more control
+over your Workers from the Flamenco Manager dashboard. You can now send Workers to **sleep**, wake
+them up when needed, or shut them down, all from the dashboard.
+
+Workers can now be started in **single task** mode, in which they automatically stop running after,
+well, executing a single task. This can be useful for short-lived machines like Google's preemptive
+compute nodes.
+
+Before introducing a new Worker to your render farm, you can now start it in **test mode**. This
+will allow the Manager to send a simple test render job to the Worker and make sure that it's set up
+correctly, before it starts accepting real tasks.
+
+For more details, checkout the
+[Flamenco Manager changelog](https://github.com/armadillica/flamenco-manager/blob/master/CHANGELOG.md)
+and
+[Flamenco Worker changelog](https://github.com/armadillica/flamenco-worker-python/blob/master/CHANGELOG.md).
+
+Download [Flamenco Manager & Worker](https://flamenco.io/download) and get started today!
+
+----
+class: default
+---
+pub_date: 2018-01-04
+---
+summary: A new version of Flamenco gives you more control over your Workers.
+---
+twitter_handle: sastuvel
