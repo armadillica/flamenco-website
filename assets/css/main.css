@@ -37,6 +37,11 @@ h2 {
   padding-top: 18px;
 }
 
+/* Fixes the hamburger menu not showing */
+button.navbar-toggle span.icon-bar {
+    border: 2px solid white;
+}
+
 .nav li a:hover {
   background-color: transparent;
   color: rgba(255,255,255,.8);
