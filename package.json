@@ -6,7 +6,7 @@
 	"author": "Pablo Vazquez",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/armadillica/flamenco.git"
+		"url": "https://github.com/armadillica/flamenco-website.git"
 	},
 	"devDependencies": {
 		"gulp": "~3.9.0",
