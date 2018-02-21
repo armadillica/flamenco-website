@@ -1,23 +1,23 @@
 {
-  "name": "flamenco",
-  "version": "1.0.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/armadillica/flamenco.git"
-  },
-  "description": "Flamenco website",
-  "author": "Pablo Vazquez",
-  "license": "GPL",
-  "devDependencies": {
-    "gulp": "~3.9.0",
-    "gulp-plumber": "~1.0.1",
-    "gulp-sass": "~2.0.4",
-    "gulp-sourcemaps": "~1.5.2",
-    "gulp-autoprefixer": "~2.3.1",
-    "gulp-jade": "~1.1.0",
-    "gulp-uglify": "~1.4.0",
-    "gulp-concat": "~2.6.0",
-    "gulp-rename": "~1.2.2",
-    "gulp-livereload": "~3.8.0"
-  }
+	"name": "flamenco",
+	"version": "1.0.0",
+	"description": "Flamenco website",
+	"license": "GPL",
+	"author": "Pablo Vazquez",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/armadillica/flamenco.git"
+	},
+	"devDependencies": {
+		"gulp": "~3.9.0",
+		"gulp-plumber": "~1.0.1",
+		"gulp-sass": "~2.0.4",
+		"gulp-sourcemaps": "~1.5.2",
+		"gulp-autoprefixer": "~2.3.1",
+		"gulp-jade": "~1.1.0",
+		"gulp-uglify": "~1.4.0",
+		"gulp-concat": "~2.6.0",
+		"gulp-rename": "~1.2.2",
+		"gulp-livereload": "~3.8.0"
+	}
 }
