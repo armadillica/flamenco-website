@@ -1,0 +1,44 @@
+title: Flamenco Manager 2.1.1
+---
+author: Sybren A. Stüvel
+---
+body:
+
+#### text-block ####
+text:
+
+Today, a new version of Flamenco Manager, version 2.1.1, was released. It polishes the web
+interface, fixes some Firefox compatibility issues, and adds some extra features. For me personally
+it's nice that we now build with the just-released [Go 1.10](https://golang.org/); for end users
+this doesn't matter much.
+
+## New stuff
+
+- Log a warning when backslashes are used in path replacement variables. Those should not be used,
+  but forward slashes should be used for every platform.
+- Allow erasing idle workers from the dashboard.
+- Show 'last seen' timestamp in idle workers tooltip on the dashboard.
+- Added `job_storage` path replacement variable to default configuration. This variable is used by
+  the test system introduced in [Flamenco Manager 2.1.0](https://www.flamenco.io/blog/2018/1/2018-01-04-new-release-210/),
+  so it's nice to actually have it available for configuration by default. Of course if you already
+  have any configuration you don't get this default, so it's up to you to add it.
+
+## Polish and fixes
+
+- Fixed race condition in JavaScript loading.
+- Fixed incompatibility of "latest image" server-side event system with Firefox.
+- Limit display height of last-rendered image to 300 pixels.
+
+For more details, checkout the
+[Flamenco Manager changelog](https://github.com/armadillica/flamenco-manager/blob/master/CHANGELOG.md)
+
+Download [Flamenco Manager 2.1.1](https://flamenco.io/download) and get started today!
+
+----
+class: default
+---
+pub_date: 2018-02-21
+---
+summary: Flamenco Manager 2.1.1 is released.
+---
+twitter_handle: sastuvel
