@@ -5,8 +5,8 @@ html(lang='en')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 		// The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
-		meta(name='description', content='')
-		meta(name='author', content='')
+		meta(name='description', content='Flamenco is the Open Source Render Farm Manager by Blender Animation Studio.')
+		meta(name='author', content='Blender Animation Studio')
 		//- link(rel='icon', href="{{ '/favicon.ico'|asseturl }}")
 		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono")
 		title.
@@ -37,7 +37,7 @@ html(lang='en')
 							a.navbar-brand(href="{{ '/'|url }}") Flamenco
 						#navbar.collapse.navbar-collapse
 							ul.nav.navbar-nav
-								| {% for id, item in bag('menu').iteritems() %}
+								| {% for id, item in bag('menu').items() %}
 								// class active
 								li
 									a(href='{{ item.path|url }}') {{ item.label }}
