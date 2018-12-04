@@ -1,0 +1,45 @@
+title: Flamenco Manager 2.2
+---
+author: Sybren A. Stüvel
+---
+body:
+
+#### text-block ####
+text:
+
+Today, a new version of Flamenco Manager, version 2.2, was released. It has some new functionality
+that requires [Flamenco Server](https://developer.blender.org/diffusion/F/) to be updated to 2.1 or
+newer (which is the case on [Blender Cloud](https://cloud.blender.org/)).
+
+## New stuff
+
+- Send the set of task types supported by our workers to Flamenco Server. This will allow it to
+  tailor some variable jobs to our capabilities.
+- Include upstream queue size on dashboard. This can aid debugging networking/performance issues.
+- Allow Workers to return tasks to the queue for re-executing later.
+- Store log entries in local files on the Manager, instead of sending all of them to the Server.
+  The log files are stored in a directory per job, and a file per task. When a task is restarted,
+  its log file is rotated (`{task-id}.log` becomes `{task-id}.log.1`). There is no automatic
+  cleanup of log files implemented; this can be handled by a system daemon or by manual deletion.
+  Log files can be accessed at http://your-manager/logfile/{job-id}/{task-id}. Requires Flamenco
+  Server version 2.1 or newer.
+
+## Fixes
+
+- Accept log entries for tasks that are no longer runnable. In this case the task's status and
+  activity doesn't change, but the logs are still accepted & forwarded to Flamenco Server. This
+  helps to figure out why a task failed, even when the logs are lagging behind.
+
+For more details, checkout the
+[Flamenco Manager changelog](https://developer.blender.org/source/flamenco-manager/browse/master/CHANGELOG.md)
+
+Download [Flamenco Manager 2.2](https://flamenco.io/download) and get started today!
+
+----
+class: default
+---
+pub_date: 2018-12-04
+---
+summary: Flamenco Manager 2.2 is released.
+---
+twitter_handle: sastuvel
