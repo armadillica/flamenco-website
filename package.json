@@ -19,5 +19,11 @@
 		"gulp-concat": "~2.6.0",
 		"gulp-rename": "~1.2.2",
 		"gulp-livereload": "~3.8.0"
+	},
+	"__COMMENTS__": [
+		"natives@1.1.6 for Gulp 3.x on Node 10.x: https://github.com/gulpjs/gulp/issues/2162#issuecomment-385197164"
+	],
+	"resolutions": {
+		"natives": "1.1.6"
 	}
 }
