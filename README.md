@@ -1,14 +1,12 @@
 # flamenco-website
 Flamenco website
 
-
-% mkvirtualenv lektor -p $(which python2)
-% pip install lektor
-% ./gulp
-% lektor server
+    pipenv install
+    ./gulp
+    pipenv run lektor server
 
 
 ## Deploying
 
-% lektor build
-% lektor deploy
+    pipenv run lektor build
+    pipenv run lektor deploy
