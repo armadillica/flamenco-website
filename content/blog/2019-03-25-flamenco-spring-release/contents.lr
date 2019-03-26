@@ -1,0 +1,94 @@
+title: Flamenco Spring Release
+---
+author: Sybren A. Stüvel
+---
+body:
+
+#### text-block ####
+text:
+
+Yesterday Flamenco Server 2.2, Manager 2.4, and Flamenco Worker 2.3 have been released. The new
+releases contain all kind of improvements we built & used during the production of
+[Spring](https://cloud.blender.org/p/spring). Of course [Blender Cloud](https://cloud.blender.org/)
+has already been updated to Flamenco Server 2.2.
+
+For more details, see the changelog files of Flamenco
+[Server](https://developer.blender.org/diffusion/F/browse/master/CHANGELOG.md;v2.2?as=remarkup),
+[Manager](https://developer.blender.org/source/flamenco-manager/browse/master/CHANGELOG.md;v2.4?as=remarkup), and
+[Worker](https://developer.blender.org/source/flamenco-worker/browse/master/CHANGELOG.md;v2.3?as=remarkup).
+
+**Download [Flamenco Manager and Worker](https://flamenco.io/download)** and get started today. All
+Blender Cloud subscribers can use our [Cloud-hosted Flamenco Server](https://cloud.blender.org/flamenco)
+as part of their subscription!
+
+
+## Flamenco Server
+
+- New interface for the job list overview, based on Vue.js. It now allows filtering and
+  sorting jobs.
+- The web interface now shows the reason why a task has a certain status (for example, "Status set
+  to requeued by Dr. Sybren").
+- Users can now use the Flamenco Server web interface to request a Task Log file from the Manager.
+  This allows access to the task logs without requiring direct access to the Manager.
+- Added `blender-video-chunks` job type, meant for encoding the edit of a film from the video
+  sequence editor. In the Blender Cloud add-on, configure it to use Matroska, MOV, or MP4 video and
+  be sure to configure an audio codec if you want audio to be in the final file. It renders the
+  frames, combines them into chunks of videos, then concatenates those video chunks together into
+  one and muxes the audio into it. The output file is nameed it with the current date, a counter to
+  make the filename unique, and the name of the blend file.
+- Progressive Blender Render jobs are smarter in the way they distribute samples. The initial tasks
+  render a small amount of samples (so that you quickly have a preview), whereas later tasks have
+  many more samples (so that they don't have to restart Blender too often). This is a
+  backward-incompatible change, and requires an upgrade of both the Blender Cloud add-on (1.12+),
+  Flamenco Worker (2.3+), and Blender 2.80 from after 2019-01-30.
+- The EXR merging of Progressive Rendering jobs is now done in one task per render iteration
+  (instead of one task per frame chunk). The entire EXR sequence is now merged in one run of
+  Blender.
+- New job status `waiting-for-files` allows a job to be created before the job's files are put into
+  place. Jobs that are not updated for 24h and still in `waiting-for-files` status are automatically
+  and irrevocably deleted.
+- Blender Render jobs no longer create preview videos for single-frame render jobs.
+
+
+## Flamenco Manager
+
+- [Shaman Server](https://www.flamenco.io/docs/user_manual/shaman/) has been integrated into
+  Flamenco Manager, which makes file transfers for Flamenco render jobs much more efficient. Use
+  `shaman://your-flamenco-manager/` as Job Storage location in the Blender Cloud add-on to use it.
+- Flamenco Manager's dashboard and log files can now be protected with JWT access tokens.
+  These tokens are handed out by Flamenco Server, and only to those users who have the right
+  to use that particular Flamenco Manager.
+- Improved failure handling. When a task is failed by a worker, it moves to status
+  `soft-failed` and will be retried by another worker. Only after three such failures
+  by three different workers (or if your farm has run out of workers to retry the task)
+  will the task go to status `failed`. This allows that one machine with a bit less memory
+  than the rest to still join your farm and work on less memory-intensive shots.
+- Offline workers can be auto-removed from the Flamenco Manager database. This allows for
+  cloud-based rendering on suddenly-disappearing low-priority machines, without filling
+  up your Manager dashboard with old workers.
+- The Manager's name as shown on its Dashboard is configurable, to allow distinguishing
+  between different render farms.
+- Worker registration can be secured with a pre-shared secret.
+- Flamenco Manager can now be restarted into Web Setup mode from the dashboard.
+- Restarting Flamenco Manager on POSIX-compliant systems (Linux, macOS) now happens
+  'in-place'; the PID remains the same and the process stays attached to the same
+  shell (if running from a shell). Systemd does not notice this restart.
+
+
+## Upcoming improvements
+
+- The access token based protection of Flamenco Manager's dashboard isn't applied to the
+  web-based setup yet. This will be implemented in Flamenco Manager 2.5.
+- [Variables and path replacement variables](https://www.flamenco.io/docs/user_manual/installation/#manager-configuration)
+  will be unified and clarified, and will become more powerful.
+
+
+
+----
+class: default
+---
+pub_date: 2019-03-26
+---
+summary: Flamenco Server 2.2, Manager 2.4, and Worker 2.3 are released.
+---
+twitter_handle: sastuvel
