@@ -1,6 +1,14 @@
 title: Flamenco Spring Release
 ---
 author: Sybren A. Stüvel
+----
+class: default
+---
+pub_date: 2019-03-26
+---
+summary: Flamenco Server 2.2, Manager 2.4, and Worker 2.3 are released.
+---
+twitter_handle: sastuvel
 ---
 body:
 
@@ -84,14 +92,3 @@ If you have questions or need help with Flamenco, pop over to our
   web-based setup yet. This will be implemented in Flamenco Manager 2.5.
 - [Variables and path replacement variables](https://www.flamenco.io/docs/user_manual/installation/#manager-configuration)
   will be unified and clarified, and will become more powerful.
-
-
-
-----
-class: default
----
-pub_date: 2019-03-26
----
-summary: Flamenco Server 2.2, Manager 2.4, and Worker 2.3 are released.
----
-twitter_handle: sastuvel
