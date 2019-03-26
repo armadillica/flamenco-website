@@ -39,6 +39,8 @@ If you have questions or need help with Flamenco, pop over to our
   sorting jobs.
 - The web interface now shows the reason why a task has a certain status (for example, "Status set
   to requeued by Dr. Sybren").
+- Job settings can be copied to the clipboard by clicking on them. Variables are automatically
+  expanded for the platform of the browser.
 - Users can now use the Flamenco Server web interface to request a Task Log file from the Manager.
   This allows access to the task logs without requiring direct access to the Manager.
 - Added `blender-video-chunks` job type, meant for encoding the edit of a film from the video
