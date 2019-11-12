@@ -9,17 +9,11 @@
 		"url": "https://github.com/armadillica/flamenco-website.git"
 	},
 	"devDependencies": {
-		"gulp": "^3.9.1",
+		"gulp": "^4.0.2",
 		"gulp-livereload": "~4.0.0",
 		"gulp-plumber": "^1.2.1",
 		"gulp-pug": "~4.0.1",
 		"gulp-uglify": "^3.0.1",
 		"minimist": "^1.2.0"
-	},
-	"__COMMENTS__": [
-		"natives@1.1.6 for Gulp 3.x on Node 10.x: https://github.com/gulpjs/gulp/issues/2162#issuecomment-385197164"
-	],
-	"resolutions": {
-		"natives": "1.1.6"
 	}
 }
